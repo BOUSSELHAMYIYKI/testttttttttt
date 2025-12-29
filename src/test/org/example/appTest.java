@@ -1,30 +1,27 @@
 package org.example;
 
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class appTest {
+public class appTest {
 
-    @org.junit.jupiter.api.BeforeEach
-    void setUp() {
+    @Test
+    public void testAdd() {
+        assertEquals(15, app.add(10, 5));
     }
 
-    @org.junit.jupiter.api.Test
-    void add() {
+    @Test
+    public void testSubtract() {
+        assertEquals(5, app.subtract(10, 5));
     }
 
-    @org.junit.jupiter.api.Test
-    void subtract() {
+    @Test
+    public void testMultiply() {
+        assertEquals(50, app.multiply(10, 5));
     }
 
-    @org.junit.jupiter.api.Test
-    void multiply() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void divide() {
-    }
-
-    @org.junit.jupiter.api.Test
-    void main() {
+    @Test
+    public void testDivide() {
+        assertEquals(2.0, app.divide(10, 5));
     }
 }
